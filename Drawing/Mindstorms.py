@@ -9,7 +9,6 @@ def draw_squares():
     box.color("red")
     box.speed(10)
     box.pensize(2)
-    ##box.hideturtle()
 
     box_dist = [100,75,50,25,5,-5,-25,-50,-75,-100]
     box_list_count = len(box_dist)
@@ -20,21 +19,27 @@ def draw_squares():
         x = box_dist.pop()
         i = 0
         z = 0
-        
-       for i range(4):
+        for i in range(4):
             box.forward(x)
             box.right(90)
             i += 1
             
-        for z in range(4:
+        for z in range(4):
             box.forward(x)
             box.left(90)
             z += 1            
 
         count += 1
 
-    box.circle(50)
-    box.circle(-50)
+    x = [-12.5,12.5,-25,25,-37.5,37.5,-50,50]
+    x_count = len(x)
+    print("x_count is ")
+
+    box.speed(10)
+
+    for i in range(x_count):
+        box.circle(x.pop())
+        i += 1
 
     box.hideturtle()
 
