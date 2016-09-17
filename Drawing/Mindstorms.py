@@ -8,7 +8,7 @@ def draw_squares():
     box.shape("arrow")
     box.color("red")
     box.speed(10)
-    box.pensize(2)
+    box.pensize(3)
 
     box_dist = [100,75,50,25,5,-5,-25,-50,-75,-100]
     box_list_count = len(box_dist)
@@ -33,12 +33,21 @@ def draw_squares():
 
     x = [-12.5,12.5,-25,25,-37.5,37.5,-50,50]
     x_count = len(x)
-    print("x_count is ")
 
     box.speed(10)
 
     for i in range(x_count):
+        box.begin_fill()
         box.circle(x.pop())
+        if (i % 2 == 0):
+            box.color("red")
+            ##box.circle(x.pop())
+            print("setting color as RED")
+        else:
+            box.color("black")
+            ##box.circle(x.pop())
+            print("setting color as black")
+        box.end_fill()
         i += 1
 
     box.hideturtle()
